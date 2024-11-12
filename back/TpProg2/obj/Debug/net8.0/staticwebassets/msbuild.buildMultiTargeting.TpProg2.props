@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TpProg2.props" />
+</Project>

@@ -1,0 +1,97 @@
+/* borrador antes de hacer forms*/
+/* Configuración del body */
+body {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar estilos iniciales */
+#sidebar {
+    background-color: #343a40;
+    min-width: 250px;
+    max-width: 250px;
+    color: white;
+    transition: all 0.3s;
+    padding: 20px;
+}
+
+/* Sidebar en modo colapsado */
+#sidebar.collapsed {
+    max-width: 70px;
+    min-width: 60px;
+}
+
+/* Estilo de enlaces de la sidebar */
+#sidebar .nav-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#sidebar .nav-link:hover {
+    background-color: #495057;
+}
+
+#sidebar .nav-link span {
+    margin-left: 10px;
+}
+
+/* Ocultar texto al colapsar la sidebar */
+#sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+/* Configuración de los submenús */
+.submenu {
+    display: none; /* Oculto inicialmente */
+    padding-left: 20px;
+}
+
+#sidebar:not(.collapsed) .submenu {
+    display: block; /* Visible cuando la sidebar no está colapsada */
+}
+
+/* Estilo de los enlaces dentro de submenús */
+.submenu .nav-link {
+    color: #adb5bd;
+    padding-left: 15px;
+}
+
+/* Contenido principal */
+#content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Estilos del botón de toggle */
+#toggle-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    outline: none;
+}
+#toggle-btn:focus {
+    outline: none; /* Elimina el borde al hacer clic */
+    box-shadow: none; /* Elimina cualquier sombra que aparezca al hacer clic */
+}
+
+#toggle-btn:hover {
+    color: #ffffffb3;
+}
+
+/* Animación del ícono de toggle al colapsar */
+#toggle-icon {
+    transition: transform 0.3s;
+}
+
+#sidebar.collapsed #toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* hasta aca -----------------------------*/

@@ -1,0 +1,81 @@
+/* Estilo general del body */
+body {
+    font-family: Arial, sans-serif; /* Cambia la fuente */
+    background-color: #f4f4f4; /* Color de fondo */
+    background-image: url('../imgs/veterinariaFondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+    display: flex;
+    justify-content: center; /* Centrar el formulario horizontalmente */
+    align-items: center; /* Centrar el formulario verticalmente */
+    height: 100vh; /* Altura del viewport completo */
+    margin: 0; /* Sin márgenes */
+    background-image: url('../imgs/veterinariaFondo.jpg'); 
+}
+
+/* Estilo del contenedor del formulario */
+form {
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    width: 300px; /* Ancho del formulario */
+}
+
+/* Estilo de los inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Margen vertical */
+    border: 1px solid #ccc; /* Bordes suaves */
+    border-radius: 4px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+/* Estilo del botón */
+input[type="button"] {
+    background-color: #5cb85c; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor a mano */
+    font-size: 16px; /* Tamaño de fuente */
+    width: 100%; /* Ancho completo */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+#botonRegistrar {
+    background-color: cornflowerblue;
+    margin-top: 5px;
+}
+
+#botonRegistrar:hover{
+    background-color: darkblue;
+}
+
+/* Estilo del botón en hover */
+input[type="button"]:hover {
+    background-color: #4cae4c; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+
+
+/* Estilo del encabezado */
+h1 {
+    text-align: center; /* Centrar el texto */
+    color: #333; /* Color del texto */
+}
+
+.error-message {
+    display: none; /* Oculto por defecto */
+    color: #ff3333;
+    font-size: 14px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border: 1px solid #ff3333;
+    border-radius: 4px;
+}

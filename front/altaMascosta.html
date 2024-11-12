@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patita's Vet</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/servicio.js"></script>
+    <!-- Iconos de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="imgs/pata.png" type="image/x-icon">
+</head>
+<header id="header">
+    <div class="container">
+        <h1>Patita's</h1>
+    </div>
+</header>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar" class="d-flex flex-column">
+        <button id="toggle-btn" class="btn mb-3 mt-3 mx-auto">
+            <img src="imgs/icons8-dog-64.png" alt="iconmenu" style="width: 32px; height: 32px;">
+
+        </button>
+        <ul class="nav flex-column">
+            <!-- Inicio -->
+        <li class="nav-item">
+            <a class="nav-link text-white" href="home.html"><i class="bi bi-menu-app"></i><span>Inicio</span></a>
+        </li>
+            <!-- Clientes con submenú desplegable -->
+        <li class="nav-item">
+            <a class="nav-link text-white toggle-link" href="#" onclick="toggleSubmenu(event, 'submenuClientes')">
+                <i class="bi bi-people"></i> <span>Clientes</span>
+            </a>
+            <ul id="submenuClientes" class="nav flex-column ms-3 submenu">
+                <li class="nav-item">
+                    <a class="nav-link text-white-50" href="altaCliente.html">Nuevo Cliente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white-50" href="listadoCliente.html">Listado Clientes</a>
+                </li>
+            </ul>
+        </li>
+        
+        <!-- Mascotas con submenú desplegable -->
+        <li class="nav-item">
+            <a class="nav-link text-white toggle-link" href="#" onclick="toggleSubmenu(event, 'submenuMascotas')">
+                <i class="bi bi-list-ul"></i> <span>Mascotas</span>
+            </a>
+            <ul id="submenuMascotas" class="nav flex-column ms-3 submenu">
+                <li class="nav-item">
+                    <a class="nav-link text-white-50" href="#">Nueva Mascota</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white-50" href="listadoMascota.html">Listado Mascotas</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="acercaDe.html">
+                <i class="bi bi-info-circle"></i> <span>Acerca De</span>
+            </a>
+        </li>
+        </ul>
+    </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center">Alta Mascota</h2>
+        <form id="form-mascota">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" pattern="[A-Za-z\s]+" title="Ingrese solo letras" class="form-control" id="input-nombre-mascota" placeholder="Ingrese nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="especie" class="form-label">Especie</label>
+                <select id="especieComboBox" class="form-select" required>
+                    <option value="" disabled selected>Seleccione una especie</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="sexo" class="form-label">Sexo</label>
+                <select class="form-select" id="input-sexo" required>
+                    <option value="Macho">Macho</option>
+                    <option value="Hembra">Hembra</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Año Nacimiento</label>
+                <input type="number" class="form-control" id="input-anio-nac" placeholder="Ingrese año nacimiento" required>
+            </div>
+            <div class="mb-3">
+                <label for="cliente" class="form-label">Cliente dueño</label>
+                <select id="clienteComboBox" class="form-select" required>
+                    <option value="" disabled selected>Seleccione un cliente</option>
+                </select>
+            </div>
+            <!--
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">Registrar Cliente</button>
+            </div>
+            -->
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Guardar
+                </button>   
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function () {
+            const sidebar = document.getElementById('sidebar');
+            const icon = document.getElementById('toggle-icon');
+            sidebar.classList.toggle('collapsed');
+        });
+    </script>
+    <script src="JS/altaMascota.js"></script>
+    <script src="JS/home.js"></script>
+</body>
+</html>
